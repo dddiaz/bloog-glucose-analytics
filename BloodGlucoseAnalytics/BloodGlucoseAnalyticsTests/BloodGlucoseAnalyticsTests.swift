@@ -1,15 +1,15 @@
 //
-//  HKTutorialTests.swift
-//  HKTutorialTests
+//  BloodGlucoseAnalyticsTests.swift
+//  BloodGlucoseAnalyticsTests
 //
-//  Created by ernesto on 18/10/14.
-//  Copyright (c) 2014 raywenderlich. All rights reserved.
+//  Created by Daniel Diaz on 9/2/15.
+//  Copyright (c) 2015 Daniel Diaz. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class HKTutorialTests: XCTestCase {
+class BloodGlucoseAnalyticsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
