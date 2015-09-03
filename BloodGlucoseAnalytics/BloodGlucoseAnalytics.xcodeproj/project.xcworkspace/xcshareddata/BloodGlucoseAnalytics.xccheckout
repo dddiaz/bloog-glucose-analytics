@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>424F3E44-DA3B-4F92-9711-2103EEE099FA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C2FA8F852F11E4F1643FBA6D3E62CDC39693BABD</key>
+		<string>https://github.com/dddiaz/bloog-glucose-analytics.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BloodGlucoseAnalytics/BloodGlucoseAnalytics.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C2FA8F852F11E4F1643FBA6D3E62CDC39693BABD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dddiaz/bloog-glucose-analytics.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C2FA8F852F11E4F1643FBA6D3E62CDC39693BABD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C2FA8F852F11E4F1643FBA6D3E62CDC39693BABD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bloog-glucose-analytics</string>
+		</dict>
+	</array>
+</dict>
+</plist>

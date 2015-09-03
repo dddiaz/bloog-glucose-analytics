@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C68C4E5C1B97EE4700CAC163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E5B1B97EE4700CAC163 /* AppDelegate.swift */; };
-		C68C4E5E1B97EE4700CAC163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E5D1B97EE4700CAC163 /* ViewController.swift */; };
-		C68C4E611B97EE4800CAC163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68C4E5F1B97EE4800CAC163 /* Main.storyboard */; };
 		C68C4E631B97EE4800CAC163 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68C4E621B97EE4800CAC163 /* Images.xcassets */; };
 		C68C4E661B97EE4800CAC163 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C4E641B97EE4800CAC163 /* LaunchScreen.xib */; };
 		C68C4E721B97EE4800CAC163 /* BloodGlucoseAnalyticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E711B97EE4800CAC163 /* BloodGlucoseAnalyticsTests.swift */; };
+		C68C4E7C1B97EFFE00CAC163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68C4E7B1B97EFFE00CAC163 /* Main.storyboard */; };
+		C68C4E801B97F06700CAC163 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E7F1B97F06700CAC163 /* HealthManager.swift */; };
+		C68C4E831B97F08D00CAC163 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E811B97F08D00CAC163 /* DatePickerCell.swift */; };
+		C68C4E841B97F08D00CAC163 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E821B97F08D00CAC163 /* NumberCell.swift */; };
+		C68C4E891B97F09900CAC163 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E851B97F09900CAC163 /* MasterViewController.swift */; };
+		C68C4E8A1B97F09900CAC163 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E861B97F09900CAC163 /* ProfileViewController.swift */; };
+		C68C4E8B1B97F09900CAC163 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E871B97F09900CAC163 /* WorkoutsTableViewController.swift */; };
+		C68C4E8C1B97F09900CAC163 /* AddWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C4E881B97F09900CAC163 /* AddWorkoutTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +35,19 @@
 		C68C4E561B97EE4700CAC163 /* BloodGlucoseAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodGlucoseAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68C4E5A1B97EE4700CAC163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C68C4E5B1B97EE4700CAC163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C68C4E5D1B97EE4700CAC163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C68C4E601B97EE4800CAC163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C68C4E621B97EE4800CAC163 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C68C4E651B97EE4800CAC163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C68C4E6B1B97EE4800CAC163 /* BloodGlucoseAnalyticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloodGlucoseAnalyticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68C4E701B97EE4800CAC163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C68C4E711B97EE4800CAC163 /* BloodGlucoseAnalyticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodGlucoseAnalyticsTests.swift; sourceTree = "<group>"; };
+		C68C4E7B1B97EFFE00CAC163 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C68C4E7F1B97F06700CAC163 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		C68C4E811B97F08D00CAC163 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
+		C68C4E821B97F08D00CAC163 /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		C68C4E851B97F09900CAC163 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		C68C4E861B97F09900CAC163 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C68C4E871B97F09900CAC163 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewController.swift; sourceTree = "<group>"; };
+		C68C4E881B97F09900CAC163 /* AddWorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +89,11 @@
 		C68C4E581B97EE4700CAC163 /* BloodGlucoseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
+				C68C4E7E1B97F03A00CAC163 /* Cells */,
+				C68C4E7D1B97F02D00CAC163 /* View Controllers */,
 				C68C4E5B1B97EE4700CAC163 /* AppDelegate.swift */,
-				C68C4E5D1B97EE4700CAC163 /* ViewController.swift */,
-				C68C4E5F1B97EE4800CAC163 /* Main.storyboard */,
+				C68C4E7F1B97F06700CAC163 /* HealthManager.swift */,
+				C68C4E7B1B97EFFE00CAC163 /* Main.storyboard */,
 				C68C4E621B97EE4800CAC163 /* Images.xcassets */,
 				C68C4E641B97EE4800CAC163 /* LaunchScreen.xib */,
 				C68C4E591B97EE4700CAC163 /* Supporting Files */,
@@ -110,6 +124,26 @@
 				C68C4E701B97EE4800CAC163 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C68C4E7D1B97F02D00CAC163 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C68C4E851B97F09900CAC163 /* MasterViewController.swift */,
+				C68C4E861B97F09900CAC163 /* ProfileViewController.swift */,
+				C68C4E871B97F09900CAC163 /* WorkoutsTableViewController.swift */,
+				C68C4E881B97F09900CAC163 /* AddWorkoutTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C68C4E7E1B97F03A00CAC163 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C68C4E811B97F08D00CAC163 /* DatePickerCell.swift */,
+				C68C4E821B97F08D00CAC163 /* NumberCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68C4E611B97EE4800CAC163 /* Main.storyboard in Resources */,
 				C68C4E661B97EE4800CAC163 /* LaunchScreen.xib in Resources */,
 				C68C4E631B97EE4800CAC163 /* Images.xcassets in Resources */,
+				C68C4E7C1B97EFFE00CAC163 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68C4E5E1B97EE4700CAC163 /* ViewController.swift in Sources */,
+				C68C4E801B97F06700CAC163 /* HealthManager.swift in Sources */,
+				C68C4E8C1B97F09900CAC163 /* AddWorkoutTableViewController.swift in Sources */,
+				C68C4E891B97F09900CAC163 /* MasterViewController.swift in Sources */,
+				C68C4E8B1B97F09900CAC163 /* WorkoutsTableViewController.swift in Sources */,
 				C68C4E5C1B97EE4700CAC163 /* AppDelegate.swift in Sources */,
+				C68C4E8A1B97F09900CAC163 /* ProfileViewController.swift in Sources */,
+				C68C4E831B97F08D00CAC163 /* DatePickerCell.swift in Sources */,
+				C68C4E841B97F08D00CAC163 /* NumberCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +276,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C68C4E5F1B97EE4800CAC163 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C68C4E601B97EE4800CAC163 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C68C4E641B97EE4800CAC163 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
