@@ -134,7 +134,13 @@ class ProfileViewController: UITableViewController {
   
   func saveBMI() {
     
-    println("TODO: save BMI sample")
+    //println("TODO: save BMI sample")
+    if bmi != nil {
+        healthManager?.saveBMISample(bmi!, date: NSDate())
+    }
+    else {
+        println("There is no BMI data to save")
+    }
     
   }
   // MARK: - utility methods

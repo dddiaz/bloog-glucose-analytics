@@ -136,4 +136,21 @@ class HealthManager {
         // 5. Execute the Query
         self.healthKitStore.executeQuery(sampleQuery)
     }
+    
+    func saveBMISample(bmi:Double, date:NSDate ) {
+        
+        // 1. Create a BMI Sample
+        let bmiType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMassIndex)
+        let bmiQuantity = HKQuantity(unit: HKUnit.countUnit(), doubleValue: bmi)
+        let bmiSample = HKQuantitySample(type: bmiType, quantity: bmiQuantity, startDate: date, endDate: date)
+        
+        // 2. Save the sample in the store
+        healthKitStore.saveObject(bmiSample, withCompletion: { (success, error) -> Void in
+            if( error != nil ) {
+                println("Error saving BMI sample: \(error.localizedDescription)")
+            } else {
+                println("BMI sample saved successfully!")
+            }
+        })
+    }
 }
