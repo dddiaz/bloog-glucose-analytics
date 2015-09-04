@@ -24,7 +24,7 @@ class ProfileViewController: UITableViewController {
   
   var healthManager:HealthManager?
   var bmi:Double?
-  
+  var height, weight:HKQuantitySample?
   
   
   func updateHealthInfo() {
@@ -48,18 +48,87 @@ class ProfileViewController: UITableViewController {
   
   func updateHeight()
   {
-    println("TODO: update Height")
+    //println("TODO: update Height")
+    // 1. Construct an HKSampleType for Height
+    let sampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)
     
+    // 2. Call the method to read the most recent Height sample
+    self.healthManager?.readMostRecentSample(sampleType, completion: { (mostRecentHeight, error) -> Void in
+        
+        if( error != nil )
+        {
+            println("Error reading height from HealthKit Store: \(error.localizedDescription)")
+            return;
+        }
+        
+        var heightLocalizedString = self.kUnknownString;
+        self.height = mostRecentHeight as? HKQuantitySample;
+        // 3. Format the height to display it on the screen
+        if let meters = self.height?.quantity.doubleValueForUnit(HKUnit.meterUnit()) {
+            let heightFormatter = NSLengthFormatter()
+            heightFormatter.forPersonHeightUse = true;
+            heightLocalizedString = heightFormatter.stringFromMeters(meters);
+        }
+        
+        
+        // 4. Update UI. HealthKit use an internal queue. We make sure that we interact with the UI in the main thread
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.heightLabel.text = heightLocalizedString
+            self.updateBMI()
+        });
+    })
   }
   
   func updateWeight()
   {
-    println("TODO: update Weight")
+    //println("TODO: update Weight")
+    
+    // 1. Construct an HKSampleType for weight
+    let sampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
+    
+    // 2. Call the method to read the most recent weight sample
+    self.healthManager?.readMostRecentSample(sampleType, completion: { (mostRecentWeight, error) -> Void in
+        
+        if( error != nil )
+        {
+            println("Error reading weight from HealthKit Store: \(error.localizedDescription)")
+            return;
+        }
+        
+        var weightLocalizedString = self.kUnknownString;
+        // 3. Format the weight to display it on the screen
+        self.weight = mostRecentWeight as? HKQuantitySample;
+        if let kilograms = self.weight?.quantity.doubleValueForUnit(HKUnit.gramUnitWithMetricPrefix(.Kilo)) {
+            let weightFormatter = NSMassFormatter()
+            weightFormatter.forPersonMassUse = true;
+            weightLocalizedString = weightFormatter.stringFromKilograms(kilograms)
+        }
+        
+        // 4. Update UI in the main thread
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.weightLabel.text = weightLocalizedString
+            self.updateBMI()
+            
+        });
+    });
   }
   
   func updateBMI()
   {
-    println("TODO: update BMI")
+    //println("TODO: update BMI")
+    
+    if weight != nil && height != nil {
+        // 1. Get the weight and height values from the samples read from HealthKit
+        let weightInKilograms = weight!.quantity.doubleValueForUnit(HKUnit.gramUnitWithMetricPrefix(.Kilo))
+        let heightInMeters = height!.quantity.doubleValueForUnit(HKUnit.meterUnit())
+        // 2. Call the method to calculate the BMI
+        bmi  = calculateBMIWithWeightInKilograms(weightInKilograms, heightInMeters: heightInMeters)
+    }
+    // 3. Show the calculated BMI
+    var bmiString = kUnknownString
+    if bmi != nil {
+        bmiLabel.text =  String(format: "%.02f", bmi!)
+    }
     
   }
   
