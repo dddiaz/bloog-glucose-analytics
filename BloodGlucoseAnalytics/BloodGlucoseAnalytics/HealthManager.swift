@@ -70,4 +70,37 @@ class HealthManager {
             }
         }
     }
+    
+    func readProfile() -> ( age:Int?,  biologicalsex:HKBiologicalSexObject?, bloodtype:HKBloodTypeObject?)
+    {
+        var error:NSError?
+        var age:Int?
+        
+        // 1. Request birthday and calculate age
+        if let birthDay = healthKitStore.dateOfBirthWithError(&error)
+        {
+            let today = NSDate()
+            let calendar = NSCalendar.currentCalendar()
+            let differenceComponents = NSCalendar.currentCalendar().components(.CalendarUnitYear, fromDate: birthDay, toDate: today, options: NSCalendarOptions(0) )
+            age = differenceComponents.year
+        }
+        if error != nil {
+            println("Error reading Birthday: \(error)")
+        }
+        
+        // 2. Read biological sex
+        var biologicalSex:HKBiologicalSexObject? = healthKitStore.biologicalSexWithError(&error);
+        if error != nil {
+            println("Error reading Biological Sex: \(error)")
+        }
+        // 3. Read blood type
+        var bloodType:HKBloodTypeObject? = healthKitStore.bloodTypeWithError(&error);
+        if error != nil {
+            println("Error reading Blood Type: \(error)")
+        }
+        
+        // 4. Return the information read in a tuple
+        return (age, biologicalSex, bloodType)
+    }
+    
 }
